@@ -38,11 +38,19 @@ Thank you.
 
 The types any, unknown, and never are used in various ways in TypeScript. Let's explain them in simple to understand their uses and differences.
 
-### any types
+### any Type
 Using the any type in TypeScript disables the compiler from checking the type. This allows any type of data to be assigned to a variable and any operation to be performed on that variable. This provides flexibility, but it removes the type safety benefits of TypeScript. Therefore, you should be careful when using any.
+````
+let value: any;
+value = 42;       
+value = "hello";  
+value.toFixed(); 
+````
+### unknown Type
+The unknown type can accept any value, just like any. However, unlike any, you cannot directly perform operations on a value of type unknown without first ensuring its type. This type-checking requirement makes unknown much safer and less error-prone.
 
+### never Type
+The never type in TypeScript is a special type that represents values or functions that are impossible to produce or complete. It signifies that some operations or code paths will never yield a value. Understanding its purpose is crucial for advanced type safety and handling edge cases in TypeScript.
 
-
-
-
+Everyone stay well and healthy, we'll talk later, one day, Inshallah.
 
